@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 font-bold text-xl text-indigo-600">
             <Package size={28} className="text-indigo-600" />
-            <span className="hidden sm:block">ShopNest</span>
+            <span className="hidden sm:block">ASad&apos;s Shop</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -107,7 +107,7 @@ export default function Navbar() {
             >
               <Heart size={20} />
               {wishlistCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-rose-500 text-white text-xs font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-rose-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
                   {wishlistCount}
                 </span>
               )}
@@ -120,7 +120,7 @@ export default function Navbar() {
             >
               <ShoppingCart size={20} />
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
@@ -138,6 +138,7 @@ export default function Navbar() {
             <button
               className="md:hidden p-2 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors"
               onClick={() => setMobileOpen((v) => !v)}
+              aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -145,19 +146,19 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-2 shadow-lg">
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-1 shadow-lg">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
               className={
-                "px-4 py-2 rounded-xl text-sm font-medium transition-colors " +
+                "block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors " +
                 (isActive(link.href)
                   ? "bg-indigo-50 text-indigo-600"
-                  : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600")
+                  : "text-gray-600 hover:bg-gray-50 hover:text-indigo-600")
               }
             >
               {link.label}
