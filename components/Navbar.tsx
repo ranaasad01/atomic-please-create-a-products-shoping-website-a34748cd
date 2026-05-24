@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 font-bold text-xl text-indigo-600">
             <Package size={28} className="text-indigo-600" />
-            <span className="hidden sm:block">ASad&apos;s Shop</span>
+            <span className="hidden sm:block">Asad&apos;s shop</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -107,7 +107,7 @@ export default function Navbar() {
             >
               <Heart size={20} />
               {wishlistCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-rose-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
                   {wishlistCount}
                 </span>
               )}
@@ -134,7 +134,7 @@ export default function Navbar() {
               <User size={20} />
             </Link>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile menu toggle */}
             <button
               className="md:hidden p-2 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition-colors"
               onClick={() => setMobileOpen((v) => !v)}

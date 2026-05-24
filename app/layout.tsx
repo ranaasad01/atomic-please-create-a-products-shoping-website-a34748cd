@@ -12,9 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 
-  title: "ASad's Shop — Premium Online Shopping",
+  title: "Asad's shop — Premium Online Shopping",
 
-  description: "Discover thousands of premium products at unbeatable prices. Shop electronics, clothing, home goods, sports gear, and more at ASad's Shop.",
+  description: "Discover thousands of premium products at unbeatable prices. Shop electronics, clothing, home goods, sports gear, and more at Asad's shop.",
 
 };
 

@@ -22,7 +22,7 @@ export default function Footer() {
 
               <Package size={28} className="text-indigo-400" />
 
-              ASad's Shop
+              Asad&apos;s shop
 
             </Link>
 
@@ -172,7 +172,7 @@ export default function Footer() {
 
                 <Phone size={16} className="text-indigo-400 shrink-0" />
 
-                <a href="tel:+11234567890" className="hover:text-indigo-400 transition-colors">+1 (123) 456-7890</a>
+                <span>+1 (555) 123-4567</span>
 
               </li>
 
@@ -180,7 +180,7 @@ export default function Footer() {
 
                 <Mail size={16} className="text-indigo-400 shrink-0" />
 
-                <a href="mailto:support@shopnest.com" className="hover:text-indigo-400 transition-colors">support@shopnest.com</a>
+                <span>support@asadsshop.com</span>
 
               </li>
 
@@ -196,21 +196,17 @@ export default function Footer() {
 
           <p className="text-sm text-gray-500">
 
-            © {new Date().getFullYear()} ASad's Shop. All rights reserved.
+            &copy; {new Date().getFullYear()} Asad&apos;s shop. All rights reserved.
 
           </p>
 
           <div className="flex items-center gap-6">
 
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (
+            <Link href="/privacy" className="text-sm text-gray-500 hover:text-indigo-400 transition-colors">Privacy Policy</Link>
 
-              <a key={item} href="#" className="text-sm text-gray-500 hover:text-indigo-400 transition-colors">
+            <Link href="/terms" className="text-sm text-gray-500 hover:text-indigo-400 transition-colors">Terms of Service</Link>
 
-                {item}
-
-              </a>
-
-            ))}
+            <Link href="/sitemap" className="text-sm text-gray-500 hover:text-indigo-400 transition-colors">Sitemap</Link>
 
           </div>
 
